@@ -1,0 +1,69 @@
+//- navbar - object of RD Navbar
+
+mixin rd-navbar-default(navbar)
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar&attributes(navbar.attr)(class= navbar.style data-md-device-layout='rd-navbar-fixed' data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="50px" data-lg-stick-up-offset="1px")
+			.rd-navbar-inner
+				// RD Navbar Panel
+				.rd-navbar-panel
+					// RD Navbar Toggle
+					button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+						span
+					// RD Navbar Brand
+					.rd-navbar-brand.veil.reveal-md-block
+						a.brand-name(href=cfg.brand.href) !{navbar.logo}
+					.rd-navbar-brand.veil-md.reveal-tablet-md-inline-block
+						a.brand-name(href=cfg.brand.href) !{navbar.logoFixed}
+
+					// RD Navbar Toggle
+					button.rd-navbar-collapse(data-rd-navbar-toggle='.rd-navbar-collapse-wrap')
+						span
+
+				.rd-navbar-right-side
+					.rd-navbar-nav-wrap.reveal-md-inline-block
+						ul.rd-navbar-nav
+							// RD Navbar Nav
+							li(class=(navbar.activeLink == 1) ? 'active' : '')
+								a(href='index.html') home
+							li(class=(navbar.activeLink == 2) ? 'active' : '')
+								a(href='empresa.html') Empresa
+								ul.rd-navbar-dropdown
+									li
+										a(href='empresa.html#historia') História
+									li
+										a(href='empresa.html#unidades') Unidades
+							li(class=(navbar.activeLink == 3) ? 'active' : '')
+								a(href='produtos.html') Produtos
+							li(class=(navbar.activeLink == 4) ? 'active' : '')
+								a(href='corte-dobra.html') O Corte e Dobra
+							li(class=(navbar.activeLink == 5) ? 'active' : '')
+								a(href='contato.html') Contato
+							li(class=(navbar.activeLink == 6) ? 'active' : '')
+								a(target='_blank' href='http://www.liverh.com.br/') Trabalhe Conosco
+
+					mixin navbar-icons(navbarIcons)
+						.rd-navbar-collapse-wrap.reveal-md-inline-block
+							ul.list-inline.list-inline-0.list-primary
+								each icon in navbarIcons
+									li.text-center
+										a.icon(target='_blank' href= icon.href class= icon.style)
+
+					+navbar-icons([{
+							"href": "http://intranet.dafel.com.br",
+							"style": "icon-xxs fa fa-lightbulb-o text-white",
+							"title": "Intranet"
+						}, {
+							"href": "https://www.facebook.com/pages/Dafel/535637076490991", 
+							"style": "icon-xxs fa fa-facebook text-white",
+							"title": "Facebook"
+						}, {
+							"href": "https://plus.google.com/u/0/110090327288440016065/posts", 
+							"style": "icon-xxs fa fa-google-plus text-white",
+							"title": "Google+"
+						}, {
+							"href": "https://www.youtube.com/channel/UCXfFf40-md_PVwq52uxbliw/feed", 
+							"style": "icon-xxs fa fa-youtube-play text-white",
+							"title": "YouTube"
+						}
+					])

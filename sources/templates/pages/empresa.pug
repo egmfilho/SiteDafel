@@ -1,0 +1,170 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-parallax
+
+block title
+	title Empresa
+
+block page
+	// Page Header
+	header.page-header.slider-menu-position
+		+rd-navbar-default({
+			"style": "",
+			"logo": cfg.brand.logo,
+			"logoFixed": cfg.brand.logoSmall,
+			"activeLink": 2,
+			"attr": {
+				"data-layout": "rd-navbar-fixed",
+				"data-sm-layout": "rd-navbar-fixed",
+				"data-md-layout": "rd-navbar-fullwidth",
+				"data-lg-layout": "rd-navbar-static"
+			}
+		})
+
+		+breadcrumb("Empresa", {
+			0: {
+				"type": "link",
+				"title": cfg.nav.home.title,
+				"href": cfg.nav.home.href
+			},
+			1: {
+				"type": "link",
+				"title": "Empresa",
+				"href": "empresa.html"
+			}
+		}, "images/backgrounds/fundo-empresa.png")
+
+	// Page Content
+	main.page-content
+
+		// História
+		section#historia.section-75.section-md-top-90.section-md-bottom-20
+			.shell
+				div
+					h1 História
+				.offset-top-10
+					h5.text-spacing-75 Teresópolis, 1990
+
+				.offset-top-30
+					img.img-circle.img-responsive.center-block(src='images/photos/dafel-1990.jpg', width='271', height='271', alt='')
+
+				.range.range-xs-center.offset-top-30.text-left
+					.cell-sm-5.cell-md-6
+						p.text-spacing-0 
+							| A Dafel iniciou suas atividades no ano de 1990 no bairro da Prata na cidade de Teresópolis-RJ. Inicialmente comercializando alumínio e ferro para indústria local e alguns acessórios.
+
+							| Com a perseverança e a competência que sempre fundamentou nossa direção, todos os contratempos e limitações foram superados. Com o passar do tempo, a empresa foi diversificando sua linha de produtos, ampliando seu mix e seus negócios.
+
+							| Em 2006, a Dafel inaugura sua filial em Cabo Frio-RJ, região dos lagos no Rio de Janeiro, assumindo a Etaferro, empresa com mais de 25 anos na localidade. Hoje a filial já é reconhecida por profissionais da construção civil e indústria como referência na região.
+
+							| Desde então outros crescimentos vem chegando em nossa empresa. Em 2009 tivemos uma reestruturação física de nossa matriz, onde abrimos de vez as portas para um aumento considerável de mix de mercadoria, trazendo muitas soluções para um só local. Acrescentamos mais dois módulos de loja, aumentando nossa fachada e trazendo maior espaço para o atendimento de nossos clientes.
+
+					.cell-sm-5.cell-md-6.offset-top-64.offset-sm-top-0
+						p.text-spacing-0 
+							| Nós da Dafel temos como foco o atendimento especializado ao cliente e para isso, temos uma linha de atendimento externo focado em atacado de aço e marcenaria. Hoje nosso atacado tem uma logística que atende não só as cidades sedes, mas também a diversos municípios vizinhos.
+
+							| Continuando a nossa linha de crescimento somado também a nossa experiência adquirida em nossa filial Cabo Frio, a Dafel dá mais um importante passo a frente e em 2011, inaugura a mais nova sede, a Dafel Lagos. Esta unidade, que se situa em Macaé-RJ, está em constante crescimento, e a cada dia se solidifica em um novo e outrora desconhecido mercado, o de off-Shore .
+
+							| No ano de 2014 a Dafel se prepara para mais um desafio. Em breve iniciaremos uma unidade de produção de artefatos de ferro e aço no município de São José do Vale do Rio Preto.
+
+							| E que os próximos anos que estão por vir tragam ainda mais crescimento! Crescimento este conquistado não só por méritos próprios, mas também por cultivar ao longo desses 24 anos um ótimo relacionamento com aqueles que nos cercam como clientes, mas também como fornecedores e equipe de colaboradores em Geral.
+
+		// Unidades
+		section#unidades
+			.shell
+				h1 Unidades
+				
+				.range.range-xs-center.offset-md-top-50
+					// Loja 1
+					.cell-sm-5.cell-md-4
+						// Blockquote
+						blockquote.quote.subsidiary
+							img.img-circle.img-responsive.center-block(src="images/subsidiary/teresopolis.jpg" width="271" height="271" alt="")
+
+							.offset-top-15.offset-md-top-30
+								p
+									cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+										a.text-mine-shaft(href="") Teresópolis
+
+							.offset-top-15.offset-md-top-30
+								p.text-spacing-0
+									q Cidade serrana, famosa pelo Dedo de Deus e pela casa da Seleção Brasileira de Futebol. Teresópolis, onde foi nosso berço e hoje abriga nossa matriz.Destacamos a tradicional distribuição e aço e a loja completa que temos nesta localidade.
+
+					// Loja 2
+					.cell-sm-5.cell-md-4
+						// Blockquote
+						blockquote.quote.subsidiary
+							img.img-circle.img-responsive.center-block(src="images/subsidiary/cabo-frio.jpg" width="271" height="271" alt="")
+
+							.offset-top-15.offset-md-top-30
+								p
+									cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+										a.text-mine-shaft(href="") Cabo Frio
+
+							.offset-top-15.offset-md-top-30
+								p.text-spacing-0
+									q Conhecida pelo sol e pelas praias maravilhosas, Cabo Frio foi o local da nossa primeira filial. Destacamos nossa loja que contém linha abrangente de máquinas e ferramentas e nossa assistência técnica reconhecida na Região dos Lagos.
+
+					// Loja 3
+					.cell-sm-5.cell-md-4
+						// Blockquote
+						blockquote.quote.subsidiary
+							img.img-circle.img-responsive.center-block(src="images/subsidiary/macae.jpg" width="271" height="271" alt="")
+
+							.offset-top-15.offset-md-top-30
+								p
+									cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+										a.text-mine-shaft(href="") Macaé
+
+							.offset-top-15.offset-md-top-30
+								p.text-spacing-0
+									q Capital nacional do Petróleo, Macaé abriga nossa jovem e pujante loja. Situada em local privilegiado temos ampla linha de produtos para empresas e consumidores.
+
+					// Loja 4
+					.cell-sm-5.cell-md-4
+						// Blockquote
+						blockquote.quote.subsidiary
+							img.img-circle.img-responsive.center-block(src="images/subsidiary/dx-vale.jpg" width="271" height="271" alt="")
+
+							.offset-top-15.offset-md-top-30
+								p
+									cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+										a.text-mine-shaft(href="") DAFEL EXPRESS - Unidade Rio Preto
+
+							.offset-top-15.offset-md-top-30
+								p.text-spacing-0
+									q Fundada em Janeiro de 2016, esta unidade foi a pioneira do modelo de lojas Express, um novo conceito de atendimento, focado em uma estrutura mais enxuta afim de estar cada vez mais proximo do cliente.
+
+					// Loja 5
+					.cell-sm-5.cell-md-4
+						// Blockquote
+						blockquote.quote.subsidiary
+							img.img-circle.img-responsive.center-block(src="images/subsidiary/dx-unamar.jpg" width="271" height="271" alt="")
+
+							.offset-top-15.offset-md-top-30
+								p
+									cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+										a.text-mine-shaft(href="") DAFEL EXPRESS - Unidade Unamar - Cabo Frio
+
+							.offset-top-15.offset-md-top-30
+								p.text-spacing-0
+									q Em breve.
+
+					// Loja 6
+					.cell-sm-5.cell-md-4
+						// Blockquote
+						blockquote.quote.subsidiary
+							img.img-circle.img-responsive.center-block(src="images/subsidiary/sao-jose.jpg" width="271" height="271" alt="")
+
+							.offset-top-15.offset-md-top-30
+								p
+									cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+										a.text-mine-shaft(href="") DAFEL São José
+
+							.offset-top-15.offset-md-top-30
+								p.text-spacing-0
+									q Em breve.
+
+	// Page Footer
+	include ../sections/_footer-default

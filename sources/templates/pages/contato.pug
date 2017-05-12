@@ -1,0 +1,99 @@
+extends  ../_skeleton
+
+block title
+  title Contato
+
+block page
+  // Page Header
+  header.page-header.slider-menu-position
+    +rd-navbar-default({
+      "style": "",
+      "logo": cfg.brand.logo,
+      "logoFixed": cfg.brand.logoSmall,
+      "activeLink": 5,
+      "attr": {
+        "data-layout": "rd-navbar-fixed",
+        "data-sm-layout": "rd-navbar-fixed",
+        "data-md-layout": "rd-navbar-fullwidth",
+        "data-lg-layout": "rd-navbar-static"
+      }
+    })
+
+    +breadcrumb("Contato", {
+      0: {
+        "type": "link",
+        "title": cfg.nav.home.title,
+        "href": cfg.nav.home.href
+      },
+      1: {
+        "type": "link",
+        "title": "Contato",
+        "href": "contato.html"
+      }
+    }, "images/backgrounds/fundo-contato.png")
+
+  // Page Content
+  main.page-content.section-md-top-90
+
+    section
+      .shell
+        h1 Entre em contato
+
+        .range.range-xs-center.offset-top-50
+          .cell-sm-6.cell-lg-4
+            // RD Mailform
+            form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-group
+                label.form-label(for="contact-name") Nome
+                input#contact-name.form-control(type="text" name="name" data-constraints='@Required')
+              .form-group.offse-top-5
+                label.form-label(for="contact-last-name") Sobrenome
+                input#contact-last-name.form-control(type="text" name="last-name" data-constraints="@Required")
+              .form-group.offse-top-5
+                label.form-label(for="contact-message") Mensagem
+                textarea#contact-message.form-control(name="message" data-constraints="@Required" style="height: 140px;")
+              .form-group.offse-top-5
+                label.form-label(for="contact-email") Email
+                input#contact-email.form-control(type="email" name="email" data-constraints="@Email @Required")
+              .text-center.text-sm-right.offse-top-5
+                button(type="submit" style="min-width: 210px;").btn.btn-primary Enviar mensagem
+
+          .cell-sm-6.cell-lg-4.offset-top-64.offset-sm-top-0.text-left
+            // Contact Info
+            address.contact-info
+              dl
+                dt.font-accent.text-bold.text-uppercase.text-mine-shaft Endereço
+                dd.offset-top-4 
+                  | Estr. Wenceslau José de Medeiros Nº 1489
+                  | Prata  -  Teresópolis - RJ
+              dl.offset-top-25
+                dt.font-accent.text-bold.text-uppercase.text-mine-shaft Horário de funcionamento
+                dd Seg à Sex, das 08:00 às 18:00; Sáb das 08:00 às 12:00
+              dl.offset-top-30
+                dt.font-accent.text-bold.text-uppercase.text-mine-shaft Telefone
+                dd
+                  a.text-silver-chalice(href="callto:#") (21) 2743-4200
+              //dl.offset-top-30
+                dt.font-accent.text-bold.text-uppercase.text-mine-shaft email
+                dd.offset-top-5
+                  a.font-accent.text-bold.text-primary(href="mailto:#") railander_007@hotmail.com
+
+    .offset-top-44
+      span !{cfg.brand.svgDivider}
+
+    section.offset-top-55
+      .range.range-xs-center
+        .cell-sm-12
+          // RD Google Map
+          .rd-google-map(class="rd-google-map__model", data-zoom='15', data-x='-42.9542585', data-y='-22.388426', data-styles='[{"featureType":"all","elementType":"all","stylers":[{"hue":"#DD6826"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"hue":"#DD6826"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"hue":"#DD6826"}]}]')
+            ul.map_locations
+              li(data-y='-22.388426', data-x='-42.9542585')
+                p
+                  | Estr. Wenceslau José de Medeiros, 1489 - Prata, Teresópolis/RJ
+
+
+  // Page Footer
+  include ../sections/_footer-default
+
+
+

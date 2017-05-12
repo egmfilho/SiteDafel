@@ -1,0 +1,124 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-parallax
+
+block title
+	title O Corte e Dobra
+
+block page
+	// Page Header
+	header.page-header.slider-menu-position
+		+rd-navbar-default({
+			"style": "",
+			"logo": cfg.brand.logo,
+			"logoFixed": cfg.brand.logoSmall,
+			"activeLink": 4,
+			"attr": {
+				"data-layout": "rd-navbar-fixed",
+				"data-sm-layout": "rd-navbar-fixed",
+				"data-md-layout": "rd-navbar-fullwidth",
+				"data-lg-layout": "rd-navbar-static"
+			}
+		})
+
+		+breadcrumb("O Corte e Dobra", {
+			0: {
+				"type": "link",
+				"title": cfg.nav.home.title,
+				"href": cfg.nav.home.href
+			},
+			1: {
+				"type": "link",
+				"title": "O Corte e Dobra",
+				"href": "corte-dobra.html"
+			}
+		}, "images/backgrounds/fundo-corte-dobra.png")
+
+	// Page Content
+	main.page-content
+
+		// Single Post
+		section.section-75.section-md-top-103.section-md-bottom-110
+			.shell
+				.range
+					.cell-md-3
+						img.img-responsive.center-block(src="images/etiqueta.png" width="200" height="200" alt="")
+
+						.offset-top-10
+							p.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft (Etiqueta do Corte e Dobra)
+
+					.cell-md-9.text-left
+						ul.post-controls.list-inline.list-inline-2.list-primary.text-center.text-md-left
+							li
+								span.text-middle.icon.icon-sm.text-primary.mdi.mdi-clock.text-center(style="width: 30px;")
+								time.text-sbold.text-extra-small.text-middle(datetime='2016-01-01') 1 de fevereiro, 2017
+							//li(style='margin-left: 14px;')
+								span.text-middle.icon.icon-sm.text-turquoise.mdi.mdi-comment-multiple-outline.text-center  
+								a.text-middle(href='#comments')
+									span.inset-left-5.text-sbold.text-extra-small.text-silver-chalice 141
+							//li
+								span.text-middle.icon.icon-sm.text-turquoise.mdi.mdi-heart-outline.text-center
+								a.text-middle(href='#')
+									span.inset-left-5.text-sbold.text-extra-small.text-silver-chalice 542
+							//li
+								span.text-middle.icon.icon-sm.text-turquoise.mdi.mdi-share.text-right  
+								a.text-middle(href='#')
+									span.inset-left-5.text-sbold.text-extra-small.text-silver-chalice 42
+
+						.offset-top-25.offset-md-top-5
+							h1.text-spacing-inverse-50.text-capitalize.text-center.text-md-left O Corte e Dobra
+
+						.offset-top-20.offset-md-top-44
+							p.text-spacing-0 O Corte e Dobra é um processo de fabricação de armações sob medida de acordo com as especificações de cada obra.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 O Aço sob medida é uma tendência que cresce a cada dia no mercado da construção Civil, ele tem o papel de garantir a qualidade e os padrões na montagem das armações. Isto favorece em tempo de execução e, além disso, otimiza o espaço a ser utilizado no canteiro de obras.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 Como a terceirização é uma tendência geral em diversos ramos, a construção civil não é diferente, através de parceiros como a DAFEL o construtor pode contar com o produto final dentro do prazo necessário, sem precisar se preocupar com mão de obra e com prazos a cumprir.
+
+		section
+			+rd-parallax({
+				"on": "false",
+				"MdOn": "true",
+				"firstLayerType": "media",
+				"firstLayerSpeed": "0.25",
+				"src": "images/backgrounds/corte-dobra.jpg",
+				"secondLayerType": "html",
+				"secondLayerSpeed": "0",
+				"fade": "false"
+			})
+				section(style="min-height: 160px; padding-bottom: 39.45%")
+
+		// Conclusion
+		section.section-75.section-md-top-110.section-md-bottom-110
+			.shell
+				.range.range-xs-center.range-lg-right
+					.cell-xs-10.cell-sm-9.text-left
+
+						p.font-accent.text-bold.text-uppercase.text-mine-shaft.text-spacing-25 Funcionamento
+
+						.offset-top-10.offset-md-top-25
+							p.text-spacing-0 O cliente entra em contato com a DAFEL solicitando o aço de acordo com um pedido prévio ou nos encaminha a planta de sua estrutura, após documentar todas as suas estruturas detalhadamente, o cliente recebe o valor final dos Aços e do Serviço. Lembrando que todas nossas estruturas confeccionadas na DAFEL são Soldadas e passam por um processo de acompanhamento de profissionais de montagem experientes.
+
+						.offset-top-10.offset-md-top-25
+							p Após a conclusão O Cliente Receberá em sua obra o Aço PRONTO!Livre de perdas e transtornos.
+
+						.range.range-xs-center
+							.cell-sm-12.cell-md-6
+								img.img-responsive.center-block(src="../images/sisprod.png")
+
+						//.group.group-xs.btn-tags.offset-top-20.offset-md-top-30.clearfix
+							a.btn.btn-info.btn-icon.btn-icon-left(href="#")
+								span.icon.icon-xs.fa.fa-facebook
+								span.text-lowercase.text-regular.text-spacing-0.font-default facebook
+							a.btn.btn-curious-blue.btn-icon.btn-icon-left(href="#")
+								span.icon.icon-xs.fa.fa-twitter
+								span.text-lowercase.text-regular.text-spacing-0.font-default twitter
+							a.btn.btn-mandy.btn-icon.btn-icon-left(href="#")
+								span.icon.icon-xs.fa.fa-google-plus
+								span.text-lowercase.text-regular.text-spacing-0.font-default google +
+
+	// Page Footer
+	include ../sections/_footer-default

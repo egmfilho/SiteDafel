@@ -1,0 +1,142 @@
+extends  ../_skeleton
+
+block title
+	title Produtos
+
+block page
+	// Page Header
+	header.page-header.slider-menu-position
+		+rd-navbar-default({
+			"style": "",
+			"logo": cfg.brand.logo,
+			"logoFixed": cfg.brand.logoSmall,
+			"activeLink": 3,
+			"attr": {
+				"data-layout": "rd-navbar-fixed",
+				"data-sm-layout": "rd-navbar-fixed",
+				"data-md-layout": "rd-navbar-fullwidth",
+				"data-lg-layout": "rd-navbar-static"
+			}
+		})
+
+		+breadcrumb("Produtos", {
+			0: {
+				"type": "link",
+				"title": cfg.nav.home.title,
+				"href": cfg.nav.home.href
+			},
+			1: {
+				"type": "link",
+				"title": "Produtos",
+				"href": "produtos.html"
+			}
+		}, "images/backgrounds/fundo-produtos.png")
+
+	// Page Content
+	main.page-content.section-75.section-md-top-90.section-md-bottom-110
+
+		// Fleet
+		section
+			.shell
+
+				.offset-top-40
+					h1.text-spacing-inverse-50 Linha de Produtos
+
+
+					.range.range-xs-center.offset-top-44.offset-md-top-53.text-sm-left
+						#protecao-sinalizacao.cell-sm-12
+							.reveal-inline-block(style='max-width: 100%;')
+								// Unit
+								.unit.unit-sm.unit-sm-horizontal.unit-spacing-sm.text-left
+									.unit-left
+										img.img-responsive.center-block(src="images/products/produto-01.png" width="270" height="270" alt="")
+									.unit-body
+										div
+											h5.p.text-capitalize.text-spacing-inverse-25
+												a.text-mine-shaft(href="#") Proteção individual e Sinalização
+											p.offset-top-15(style='line-height: 22px;').
+												Todo trabalhador deve ter uma mesma prioridade, a sua segurança. Pensando nisso nós da Dafel temos aumentado a cada dia o mix de equipamentos de segurança individual. Em nossas lojas você encontra capacetes, luvas, botas e calçados de segurança, cintos, óculos, mascaras e muito mais. Além de cones e faixa de sinalização, telas de proteção, mascaras de solda e etc.
+											.offset-top-10
+												//a.btn-link.text-turquoise.text-extra-small.text-bold.font-accent.text-spacing-50.text-uppercase(href="reservations.html") Book Now
+
+						#aluminio.cell-sm-12.offset-top-60
+							.reveal-inline-block(style='max-width: 100%;')
+								// Unit
+								.unit.unit-sm.unit-sm-horizontal.unit-spacing-sm.text-right
+									.unit-body
+										div
+											h5.p.text-capitalize.text-spacing-inverse-25
+												a.text-mine-shaft(href="#") Perfis de Alumínio
+											p.offset-top-15(style='line-height: 22px;').
+												O Alumínio é um dos materiais em grande crescimento em diversas aplicações não só pela beleza, mas principalmente pela durabilidade. Por isso investimos a cada dia em produtos seguindo as mais modernas tendências de mercado. Trabalhamos com linhas tradicionais como a linha 25 e 28 além da linha suprema e perfis leves e pesados para temperados.
+											.offset-top-10
+												//a.btn-link.text-turquoise.text-extra-small.text-bold.font-accent.text-spacing-50.text-uppercase(href="reservations.html") Book Now
+									.unit-right
+										img.img-responsive.center-block(src="images/products/produto-02.png" width="270" height="270" alt="")
+
+						#fabricacao-propria.cell-sm-12.offset-top-60
+							.reveal-inline-block(style='max-width: 100%;')
+								// Unit
+								.unit.unit-sm.unit-sm-horizontal.unit-spacing-sm.text-left
+									.unit-left
+										img.img-responsive.center-block(src="images/products/produto-03.png" width="270" height="270" alt="")
+									.unit-body
+										div
+											h5.text-capitalize.text-spacing-inverse-25.p
+												a.text-mine-shaft(href="#") Fabricação Própria
+											p.offset-top-15(style='line-height: 22px;').
+												Temos toda uma preocupação em atender nossos clientes com produtos de qualidade e em condições coerentes com o mercado, por isso alguns itens nós fuscamos a formula para gerar um resultado de custo benefício ainda melhor. Produzimos produtos de qualidade, para atender nossos estoques, mas também geramos alguns sob encomenda. Nossos produtos são produzidos em nossa unidade fabril. A rio Preto produz telas losango, galvanizadas e plastificadas, telhas galvanizadas e galvanizadas termoacústicas. Essas com coloração natural ou com pintura eletrostática branca. Além disso nossa unidade também gera estribos, radiers e arames, sendo esses galvanizados ou recozidos.
+											.offset-top-10
+												//a.btn-link.text-turquoise.text-extra-small.text-bold.font-accent.text-spacing-50.text-uppercase(href="reservations.html") Book Now
+
+						#serralheria.cell-sm-12.offset-top-60
+							.reveal-inline-block(style='max-width: 100%;')
+								// Unit
+								.unit.unit-sm.unit-sm-horizontal.unit-spacing-sm.text-right
+									.unit-body
+										div
+											h5.text-capitalize.text-spacing-inverse-25.p
+												a.text-mine-shaft(href="#") Serralheria
+											p.offset-top-15(style='line-height: 22px;').
+												A Serralheria é uma arte antiga, porém está continuamente presente em nosso dia a dia, nos surpreendendo com novas utilidades em ambientes estruturais, e também decorativo. Nosso mix de serralheria, perfis chapas de ferro tradicional e galvanizado, tubos industriais, tubos galvanizados, Perfis U, Vigas, ferro fundido, patamares, bobinas a meto e muito mais.
+											.offset-top-10
+												//a.btn-link.text-turquoise.text-extra-small.text-bold.font-accent.text-spacing-50.text-uppercase(href="reservations.html") Book Now
+									.unit-right
+										img.img-responsive.center-block(src="images/products/produto-04.png" width="270" height="270" alt="")
+
+						#maquinas-ferramentas.cell-sm-12.offset-top-60
+							.reveal-inline-block(style='max-width: 100%;')
+								// Unit
+								.unit.unit-sm.unit-sm-horizontal.unit-spacing-sm.text-left
+									.unit-left
+										img.img-responsive.center-block(src="images/products/produto-05.png" width="270" height="270" alt="")
+									.unit-body
+										div
+											h5.text-capitalize.text-spacing-inverse-25.p
+												a.text-mine-shaft(href="#") Máquinas e Ferramentas
+											p.offset-top-15(style='line-height: 22px;').
+												Nosso mix de ferramenta é bem variado e completo, temos ferramentas pesadas para uso na construção civil, como baldes, pá, enxada, cavadeiras simples e articuladas, carrinhos de mão, peneiras, colher de pedreiro, trados e muitas outras. Além de tudo isso também temos a linha de ferramentas voltadas para o dia a dia, que seriam as chaves, alicates, martelos, grampeadores, serrotes e muitos outros. No mix de ferramentas elétricas e máquinas, somos representantes DeWalt e Black&Decker, além disso temos diversas marcas desde parafusadeiras até compressores de alta pressão. Nosso mix de maquinas possui: Furadeiras de mão e de bancada, parafusadeiras, Marteletes, Lixadeiras, Bombas, Serras de Bancada e policorte, esmerilhadeiras, maquinas de solda e muito mais.
+											.offset-top-10
+												//a.btn-link.text-turquoise.text-extra-small.text-bold.font-accent.text-spacing-50.text-uppercase(href="reservations.html") Book Now
+
+						#aco.cell-sm-12.offset-top-60
+							.reveal-inline-block(style='max-width: 100%;')
+								// Unit
+								.unit.unit-sm.unit-sm-horizontal.unit-spacing-sm.text-right
+									.unit-body
+										div
+											h5.text-capitalize.text-spacing-inverse-25.p
+												a.text-mine-shaft(href="#") Aço para construção civil
+											p.offset-top-15(style='line-height: 22px;').
+												Temos diversas linhas de produtos para construção, desde a linha básica de vergalhões em vara, até a linha de corte e dobra já pronto para sua obra. Nossa linha possui, muito mais que vergalhões, temos a linha de aço pronto. Estribos, Radier, Colunas, Murfor ainda Telas soldadas para pisos e lajes. Os acessórios também são itens presentes, como arame recozido e trançado, além de uma variedade grande de pregos.
+											.offset-top-10
+												//a.btn-link.text-turquoise.text-extra-small.text-bold.font-accent.text-spacing-50.text-uppercase(href="reservations.html") Book Now
+									.unit-right
+										img.img-responsive.center-block(src="images/products/produto-06.png" width="270" height="270" alt="")
+
+				.offset-top-44
+					span !{cfg.brand.svgDivider}
+
+
+	// Page Footer
+	include ../sections/_footer-default

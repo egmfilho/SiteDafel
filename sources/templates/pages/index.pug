@@ -1,0 +1,670 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-box-icon
+include ../elements/_ui-rd-parallax
+
+block title
+	title Home
+
+block page
+	// Page Header
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-navbar-panel(data-md-device-layout='rd-navbar-fixed', data-lg-device-layout='rd-navbar-static', data-md-stick-up-offset='120px', data-lg-stick-up-offset='120px', data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-md-layout='rd-navbar-fullwidth', data-lg-layout='rd-navbar-fullwidth')
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel
+						// RD Navbar Toggle
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+							span
+						// RD Navbar Brand
+						.rd-navbar-brand.veil.reveal-md-block.veil-tablet-md
+							a.brand-name(href='index.html')
+								img(width='210', height='70', src='images/logo.png', alt='')
+						.rd-navbar-brand.veil-md.reveal-tablet-md-inline-block
+							a.brand-name(href='index.html')
+								img(style='margin-top: -7px;', width='182', height='34', src='images/logo-dark.png', alt='')
+						// RD Navbar Toggle
+						button.rd-navbar-collapse(data-rd-navbar-toggle='.rd-navbar-collapse-wrap')
+							span
+					.rd-navbar-right-side
+						.pull-md-left.veil.reveal-lg-inline-block
+							a(href='')
+								span.icon.icon-xxs.mdi.mdi-phone.text-white.text-middle
+								span.text-bold.text-spacing-25.text-white.text-extra-small (21) 2743 4200
+						.rd-navbar-nav-wrap.reveal-md-inline-block
+							ul.rd-navbar-nav
+								// RD Navbar Nav
+								li.active
+									a(href='index.html') Home
+								li
+									a(href='empresa.html') Empresa
+									ul.rd-navbar-dropdown
+										li
+											a(href='empresa.html#historia') História
+										li
+											a(href='empresa.html#unidades') Unidades										
+								li
+									a(href='produtos.html') Produtos
+								li
+									a(href='corte-dobra.html') O Corte e Dobra
+								li
+									a(href='contato.html') Contato
+								li
+									a(target='_blank' href='http://www.liverh.com.br/') Trabalhe Conosco
+									
+						.pull-md-right
+							.rd-navbar-collapse-wrap.reveal-md-inline-block
+								.veil-lg
+									a(href='')
+										span.icon.icon-xxs.mdi.mdi-phone.text-primary.text-middle
+										span.text-bold.text-spacing-25.text-primary.text-extra-small (21) 2743 4200
+								.offset-top-4.offset-lg-top-0
+									ul.list-inline.list-inline-0.list-primary
+										li.text-center
+											a.icon.icon-xxs.fa.fa-lightbulb-o.text-white(target="_blank" href="http://intranet.dafel.com.br" title="Intranet")
+										li.text-center
+											a.icon.icon-xxs.fa.fa-facebook.text-white(target="_blank" href="https://www.facebook.com/pages/Dafel/535637076490991" title="Facebook")
+										li.text-center
+											a.icon.icon-xxs.fa.fa-google-plus.text-white(target="_blank" href="https://plus.google.com/u/0/110090327288440016065/posts" title="Google+")
+										li.text-center
+											a.icon.icon-xxs.fa.fa-youtube-play.text-white(target="_blank" href="https://www.youtube.com/channel/UCXfFf40-md_PVwq52uxbliw/feed", title="YouTube")
+
+		// Swiper Gallery
+		.swiper-container.gallery-top
+			.swiper-wrapper
+				.swiper-slide(style='background-image:url(images/backgrounds/01.png)')
+					.tonal-layer
+					.shell.relative-position
+						.range.range-xs-center
+							.cell-sm-10
+								.text-extra-big.font-accent.text-bold.text-spacing-inverse-50.text-white.text-shadow Telhas Termoacústicas
+								h5.offset-top-10.text-white.text-spacing-0.text-transform-none.text-shadow Na dúvida do que usar na cobertura? 
+									| Temos a solução, telhas galvanizadas e também com preenchimento termoacústico. Fabricação própria.
+									
+								.btn-both-lines.offset-top-30.center-block(style="max-width:510px;")
+									a.btn.btn-primary(href="#" style="min-width:240px;") Ver mais
+
+				.swiper-slide(style='background-image:url(images/backgrounds/02.png);')
+					.tonal-layer
+					.shell.relative-position
+						.range.range-xs-center
+							.cell-sm-10
+								.text-extra-big.font-accent.text-bold.text-spacing-inverse-50.text-white.text-shadow Construção Civil
+								h5.offset-top-10.text-white.text-spacing-0.text-transform-none.text-shadow Conheça a variedade de soluções em aço para construção civil que a Dafel oferece para você!
+								.btn-both-lines.offset-top-30.center-block(style="max-width:510px;")
+									a.btn.btn-primary(href="#" style="min-width:240px;") Ver mais
+
+				.swiper-slide(style='background-image:url(images/backgrounds/03.png)')
+					.tonal-layer
+					.shell.relative-position
+						.range.range-xs-center
+							.cell-sm-10
+								.text-extra-big.font-accent.text-bold.text-spacing-inverse-50.text-white.text-shadow Corte & Dobra
+								h5.offset-top-10.text-white.text-spacing-0.text-transform-none.text-shadow Conheça este serviço que pode mudar a história da sua obra.
+								.btn-both-lines.offset-top-30.center-block(style="max-width:510px;")
+									a.btn.btn-primary(href="corte-dobra.html" style="min-width:240px;") Ver mais
+
+				.swiper-slide(style='background-image:url(images/backgrounds/04.png)')
+					.tonal-layer
+					.shell.relative-position
+						.range.range-xs-center
+							.cell-sm-10
+								.text-extra-big.font-accent.text-bold.text-spacing-inverse-50.text-white.text-shadow Serralheria
+								h5.offset-top-10.text-white.text-spacing-0.text-transform-none.text-shadow Temos uma grande linha de serralheria, perfis, ferramentas e acessórios.
+								.btn-both-lines.offset-top-30.center-block(style="max-width:510px;")
+									a.btn.btn-primary(href="#" style="min-width:240px;") Ver mais
+
+			// Add Arrows
+			.swiper-button-next.swiper-button-white
+			.swiper-button-prev.swiper-button-white
+
+	// Page Content
+	main.page-content
+
+		// Grupo de produtos
+		section.shell.offset-top-64.offset-md-top-115
+			h1 Linha de Produtos
+
+			.range.range-xs-center.offset-top-50.offset-md-top-20
+				.cell-sm-5.cell-md-4
+					// Blockquote
+					blockquote.quote.product-line
+						img.img-responsive.center-block(src="images/products/produto-06.png" width="350" height="170" alt="")
+
+						.offset-top-10.offset-md-top-20
+							p
+								cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+									a.text-mine-shaft(href="produtos.html#aco") Aço para construção civil
+
+						.offset-top-10.offset-md-top-15
+							p.text-extra-small
+								q.text-extra-small Temos diversas linhas de produtos para construção, desde a linha básica de vergalhões em vara, até a linha de corte e dobra já pronto para sua obra. Nossa linha possui muito mais que vergalhões, temos a linha de aço pronto, Estribos, Radier, Colunas, Murfor ainda Telas soldadas para pisos e lajes.
+
+						.offset-top-10
+							h5.text-spacing-20.text-silver-chalice ...
+
+				.cell-sm-5.cell-md-4.offset-top-64.offset-sm-top-0
+					// Blockquote
+					blockquote.quote.product-line
+						img.img-responsive.center-block(src="images/products/produto-05.png" width="350" height="170" alt="")
+
+						.offset-top-10.offset-md-top-20
+							p
+								cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+									a.text-mine-shaft(href="produtos.html#maquinas-ferramentas") Máquinas e Ferramentas
+
+						.offset-top-10.offset-md-top-15
+							p.text-extra-small
+								q.text-extra-small Nosso mix de ferramentas é bem variado e completo. Temos ferramentas pesadas para uso na construção civil como baldes, pás, enxadas, cavadeiras simples e articuladas, carrinhos de mão, peneiras, colheres de pedreiro, trados e muitas outras.
+
+						.offset-top-10
+							h5.text-spacing-20.text-silver-chalice ...
+
+				.cell-sm-5.cell-md-4.offset-top-64.offset-md-top-0
+					// Blockquote
+					blockquote.quote.product-line
+						img.img-responsive.center-block(src="images/products/produto-02.png" width="350" height="170" alt="")
+
+						.offset-top-10.offset-md-top-20
+							p
+								cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+									a.text-mine-shaft(href="produtos.html#aluminio") Perfis de Alumínio
+
+						.offset-top-10.offset-md-top-15
+							p.text-extra-small
+								q.text-extra-small O Alumínio é um dos materiais em grande crescimento em diversas aplicações . Por isso investimos a cada dia em produtos seguindo as mais modernas tendências de mercado. Trabalhamos com linhas tradicionais, como a linha 25 e 28 além da linha suprema, perfis leves e perfis pesados para temperados.
+
+						.offset-top-10
+							h5.text-spacing-20.text-silver-chalice ...
+
+				.cell-sm-5.cell-md-4.offset-top-64.offset-md-top-30
+					// Blockquote
+					blockquote.quote.product-line
+						img.img-responsive.center-block(src="images/products/produto-04.png" width="350" height="170" alt="")
+
+						.offset-top-10.offset-md-top-20
+							p
+								cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+									a.text-mine-shaft(href="produtos.html#serralheria") Serralheria
+
+						.offset-top-10.offset-md-top-15
+							p.text-extra-small
+								q.text-extra-small A Serralheria é uma arte antiga porém está continuamente presente em nosso dia a dia, nos surpreendendo com novas utilidades em ambientes estruturais e também decorativo. Nosso mix de serralheria conta com perfis, chapas de ferro, tubos, vigas, ferro fundido, patamares, bobinas a metro e muito mais.
+
+						.offset-top-10
+							h5.text-spacing-20.text-silver-chalice ...
+
+				.cell-sm-5.cell-md-4.offset-top-64.offset-md-top-30
+					// Blockquote
+					blockquote.quote.product-line
+						img.img-responsive.center-block(src="images/products/produto-03.png" width="350" height="170" alt="")
+
+						.offset-top-10.offset-md-top-20
+							p
+								cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+									a.text-mine-shaft(href="produtos.html#fabricacao-propria") Fabricação Própria
+
+						.offset-top-10.offset-md-top-15
+							p.text-extra-small
+								q.text-extra-small Procurando atender nossos clientes com qualidade e condições coerentes com o mercado, buscamos a fórmula para gerar um resultado de custo benefício ainda melhor. Nossa unidade fabril, a Rio Preto, produz telas, telhas, estribos, radiers e arames.
+
+						.offset-top-10
+							h5.text-spacing-20.text-silver-chalice ...
+
+				.cell-sm-5.cell-md-4.offset-top-64.offset-md-top-30
+					// Blockquote
+					blockquote.quote.product-line
+						img.img-responsive.center-block(src="images/products/produto-01.png" width="350" height="170" alt="")
+
+						.offset-top-10.offset-md-top-20
+							p
+								cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+									a.text-mine-shaft(href="produtos.html#protecao-sinalizacao") Proteção Individual e Sinalização
+
+						.offset-top-10.offset-md-top-15
+							p.text-extra-small
+								q.text-extra-small Todo trabalhador deve ter uma mesma prioridade, a sua segurança. Em nossas lojas você encontra capacetes, luvas, botas, calçados de segurança, cintos, óculos , mascaras e muito mais. Além de cones, faixa de sinalização, telas de proteção, mascaras de solda e etc.
+
+						.offset-top-10
+							h5.text-spacing-20.text-silver-chalice ...
+
+		// GPTW
+		section(style='margin-top: 150px').context-dark
+			+rd-parallax-video({
+				"on": "false",
+				"MdOn": "true",
+				"firstLayerType": "media",
+				"firstLayerSpeed": "0.5",				
+				"mp4": "videos/gptw/bg-xs.mp4",
+				"ogg": "videos/gptw/bg-xs.ogg",
+				"secondLayerType": "html",
+				"secondLayerSpeed": "0",
+				"fade": "false"
+			})
+				.shell.section-75.section-md-top-103.section-md-bottom-110
+					.range.range-xs-center
+						.cell-sm-10
+							.veil.reveal-sm-inline-block.text-bottom(style="margin-bottom:17px;")
+								img.img-responsive.center-block(src="images/divider-01-135x4.png" width="135" height="2" alt="" style='opacity: .5;')
+
+							.veil.reveal-sm-inline-block
+								span.icon.icon-lg.mdi.mdi-trophy-outline.text-white
+
+							.veil.reveal-sm-inline-block.text-bottom(style="margin-bottom:17px;")
+								img.img-responsive.center-block(src="images/divider-01-135x4.png" width="135" height="2" alt="" style='opacity: .5;')
+
+
+							.offset-top-15.offset-md-top-30
+								h1.text-spacing-0.text-uppercase Great Place To Work 
+								h3.text-spacing-0.text-uppercase #SOUDASMELHORES 
+
+								.offset-top-20.offset-md-top-44
+									p.h5.text-spacing-inverse-25.text-transform-none Estar entre as melhores empresas para se trabalhar no Brasil, nos deixa muito honrado! Sabemos que nenhuma conquista vem sem suor e esforço, por isso agradecemos a cada colaborador e amigo que vem fazendo parte dessa história tão vitoriosa.
+
+								.offset-top-30.offset-md-top-60
+									a.btn.btn-calypso(href="gptw.html" style="min-width:240px;") Ver mais
+
+		
+		// Unidades
+		mixin team-icons(teamIcons)
+			ul.list-inline.list-inline-0.list-calypso
+				each icon in teamIcons
+					li.text-center
+						a.icon(href= icon.href class= icon.style)
+
+		section.shell.offset-top-90.offset-md-top-115
+			h1 Unidades
+
+			.range.range-xs-center.offset-top-53.text-sm-left
+				.cell-sm-10.cell-lg-12
+					// Owl Carousel
+					.owl-carousel.owl-nav-primary(data-items='1' data-lg-items='2' data-xs-stage-padding='5' data-loop='true' data-margin='30' data-mouse-drag="false" data-nav='true' data-dots="true")
+						.owl-item
+							// Blockquote
+							blockquote.quote
+								// Media
+								.media.media-sm-custom
+									.media-left
+										img.img-circle.center-block(src="images/subsidiary/teresopolis.jpg" width="271" height="271" alt="")
+
+									.media-body.offset-top-15.offset-sm-top-0.text-middle
+										p
+											cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+												a.text-mine-shaft(href="empresa.html#unidades") Teresópolis
+
+										.offset-top-20
+											p.text-spacing-0
+												i.fa.fa-map-marker &nbsp;
+												| Estr. Wenceslau José de Medeiros Nº 1489
+												| Prata  -  Teresópolis - RJ
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-clock-o &nbsp;
+												| Seg à Sex, das 08:00 às 18:00; Sáb das 08:00 às 12:00
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-phone &nbsp;
+												| (21) 2743-4200
+
+						.owl-item
+							// Blockquote
+							blockquote.quote
+								// Media
+								.media.media-sm-custom
+									.media-left
+										img.img-circle.center-block(src="images/subsidiary/cabo-frio.jpg" width="271" height="271" alt="")
+
+									.media-body.offset-top-15.offset-sm-top-0.text-middle
+										p
+											cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+												a.text-mine-shaft(href="produtos.html") Cabo Frio
+												
+										.offset-top-20
+											p.text-spacing-0
+												i.fa.fa-map-marker &nbsp;
+												| Av. América Central Nº1721
+												| São Cristóvão - Cabo Frio - RJ
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-clock-o &nbsp;
+												| Seg à Sex, das 07:30 às 17:30; Sáb das 08:00 às 12:00
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-phone &nbsp;
+												| (22) 2646-2250
+
+						.owl-item
+							// Blockquote
+							blockquote.quote
+								// Media
+								.media.media-sm-custom
+									.media-left
+										img.img-circle.center-block(src="images/subsidiary/macae.jpg" width="271" height="271" alt="")
+
+									.media-body.offset-top-15.offset-sm-top-0.text-middle
+										p
+											cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+												a.text-mine-shaft(href="empresa.html#unidades") Macaé
+
+										.offset-top-20
+											p.text-spacing-0
+												i.fa.fa-map-marker &nbsp;
+												| Av. Guadalajara, 732
+												| Praia Campista  - Macaé - RJ
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-clock-o &nbsp;
+												| Seg à Sex, das 08:00 às 18:00; Sáb das 08:00 às 12:00
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-phone &nbsp;
+												| (22) 2763-6550
+
+						.owl-item
+							// Blockquote
+							blockquote.quote
+								// Media
+								.media.media-sm-custom
+									.media-left
+										img.img-circle.center-block(src="images/subsidiary/sao-jose.jpg" width="271" height="271" alt="")
+
+									.media-body.offset-top-15.offset-sm-top-0.text-middle
+										p
+											cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+												a.text-mine-shaft(href="produtos.html") São José
+												
+										.offset-top-20
+											p.text-spacing-0
+												i.fa.fa-map-marker &nbsp;
+												| Estr. Silveira Da Mota - KM 24,
+												| Águas Claras - São José Do Vale Do Rio Preto - RJ
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-clock-o &nbsp;
+												| Seg à Sex, das 07:00 às 17:00; Sáb das 08:00 às 12:00
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-phone &nbsp;
+												| (24) 2224-1395
+
+						.owl-item
+							// Blockquote
+							blockquote.quote
+								// Media
+								.media.media-sm-custom
+									.media-left
+										img.img-circle.center-block(src="images/subsidiary/dx-vale.jpg" width="271" height="271" alt="")
+
+									.media-body.offset-top-15.offset-sm-top-0.text-middle
+										p
+											cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+												a.text-mine-shaft(href="produtos.html") DAFEL EXPRESS - Unidade Rio Preto
+												
+										.offset-top-20
+											p.text-spacing-0
+												i.fa.fa-map-marker &nbsp;
+												| Estr. Silveira Da Mota - KM 24,
+												| Águas Claras - São José Do Vale Do Rio Preto - RJ
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-clock-o &nbsp;
+												| Seg à Sex, das 07:30 às 17:30; Sáb das 08:00 às 12:00
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-phone &nbsp;
+												| (24) 2224-1395
+
+						.owl-item
+							// Blockquote
+							blockquote.quote
+								// Media
+								.media.media-sm-custom
+									.media-left
+										img.img-circle.center-block(src="images/subsidiary/dx-unamar.jpg" width="271" height="271" alt="")
+
+									.media-body.offset-top-15.offset-sm-top-0.text-middle
+										p
+											cite.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft
+												a.text-mine-shaft(href="empresa.html#unidades") DAFEL EXPRESS - Unidade Unamar - Cabo Frio
+
+										.offset-top-20
+											p.text-spacing-0
+												i.fa.fa-map-marker &nbsp;
+												| R. Manoel Martinho Leal, 67
+												| Unamar(Tamoios) - Cabo Frio - RJ 
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-clock-o &nbsp;
+												| Seg à Sex, das 08:00 às 17:30; Sáb das 08:00 às 12:00
+										.offset-top-10
+											p.text-spacing-0
+												i.fa.fa-phone &nbsp;
+												| (22) 2644-8757
+
+
+		// Linha do Tempo
+		section.context-dark.text-sm-left.offset-top-90
+			+rd-parallax({
+				"on": "false",
+				"MdOn": "true",
+				"firstLayerType": "media",
+				"firstLayerSpeed": "0",
+				"src": "images/backgrounds/background-17-1920x578.jpg",
+				"secondLayerType": "html",
+				"secondLayerSpeed": "0",
+				"fade": "false"
+			})
+				.shell.section-75.section-md-top-90.section-md-bottom-75
+					h1.text-spacing-inverse-25.text-bold.text-center Nossa História
+
+					.offset-top-44
+						// Owl Carousel
+						.owl-carousel.owl-nav-white(data-items='1' data-sm-items='2' data-md-items='3' data-xs-stage-padding='0' data-loop='true' data-margin='30' data-mouse-drag="false" data-nav='true' data-dots="true")
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 1990
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Início
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Buscando o mercado de Serralheria a Dafel inicia suas atividades.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 1993
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Construção Civil
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Visando o crescimento de sua abragencia no mercado a dafel inicia a comercialização para construção civil.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2003
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Atacado
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text A Dafel inicia sua estrutura comercial e logística de distribuição e atacado.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2006
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Primeira Filial
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Para abrir a área de atuação, uma frente seria necessária, e em meados de 2006 nasce a loja de Cabo Frio.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2007
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Reconhecimento
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Dafel reconhecida como o distribuidor de aço que mais cresceu no ano no Estado do RJ.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2008
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Feira Forte
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Primeira participação na Feira Forte em Cabo Frio, lançando a campanha de Mudas de Pau Brasil.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2009
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Expansão da Matriz
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Enxergando a Necessidade de Crescimento, a Dafel expandiu sua loja, crescendo não só o ambiente de loja mas também o MIX de produtos a partir de então.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2009
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Expo Serralheiro
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Primeira edição da Serralheiro Expo, chamada até então como dia do Serralheiro, uma comemoração pelo dia do serralheiro 23 de abril.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2010
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Treinamento
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Inauguração do Auditório de Treinamento Interno da Empresa.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2011
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Unidade Macaé
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Com conhecimentos ja adquiridos na abertura da primeira filial, em 2011 nasce a unidade de Macaé, buscando atender uma região em crescimento.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2011
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Mc dia Feliz
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Primeiro apadrinhamento do evento em Teresópolis e Cabo Frio, evento que apoiamos até hoje.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2012
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Crescimento
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Primeira aparição da Dafel no Ranking das 250 maiores empresas para se trabalhar no Brasil.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2014
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Unidade de Produção
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Inauguração da Unidade Fabril em São José do Vale do Rio Preto.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2015
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") FEPRO - Teresópolis
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Após varios anos a Dafel retoma o Trabalho de Divulgação da Marca visando difundir os produtos de fabricação própria.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2016
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Dafel Express
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Nascimento do Conceito express - Unidade São josé do Vale do Rio Preto.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2016
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") GPTW
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text A Dafel entra no Ranking das melhores empresas para se trabalhar no varejo Nacional.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2016
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Expansão da linha Express
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Abertura dá Dafel Express Unamar, uma região em grande crescimento e com um posicionamento estratégico.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+							div
+								div
+									p.text-bold.font-accent.text-spacing-inverse-25.timeline-year 2017
+								.offset-top-4
+									h5.text-spacing-inverse-25.text-bold.text-capitalize
+										a(href="blog-single-post.html") Carton
+								.offset-top-20
+									p.text-extra-small.text-spacing-0.timeline-text Nascimento de uma nova marca - Carton DryWall, uma expansão nos negócios da Dafel.
+								.offset-top-10
+									h5.text-spacing-20(style="color:rgba(255,255,255,0.6);") ...
+
+
+
+	// Page Footer
+	include ../sections/_footer-variant-2
+		//- only on index page
+		block footerLink
+			// {%FOOTER_LINK}

@@ -1,0 +1,148 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-lists
+
+block title
+	title GPTW
+
+block page
+	// Page Header
+	header.page-header.slider-menu-position
+		+rd-navbar-default({
+			"style": "",
+			"logo": cfg.brand.logo,
+			"logoFixed": cfg.brand.logoSmall,			
+			"attr": {
+				"data-layout": "rd-navbar-fixed",
+				"data-sm-layout": "rd-navbar-fixed",
+				"data-md-layout": "rd-navbar-fullwidth",
+				"data-lg-layout": "rd-navbar-static"
+			}
+		})
+
+		+breadcrumb("Great Places to Work", {
+			0: {
+				"type": "link",
+				"title": cfg.nav.home.title,
+				"href": cfg.nav.home.href
+			},
+			1: {
+				"type": "link",
+				"title": "GPTW",
+				"href": "corte-gptw.html"
+			}
+		}, "images/backgrounds/fundo-gptw.png")
+
+	// Page Content
+	main.page-content
+
+		// Single Post
+		section.section-75.section-md-top-103.section-md-bottom-20
+			.shell
+				.range
+					.cell-md-3
+						img.img-responsive.center-block(src="images/gptw.png" width="271" height="271" alt="")
+
+						.offset-top-25
+							div
+								h5.text-spacing-inverse-25.text-capitalize GPTW
+							.offset-top-4
+								p.font-accent.text-bold.text-spacing-inverse-25.text-mine-shaft (Great Place to Work®)
+
+					.cell-md-9.text-left
+						ul.post-controls.list-inline.list-inline-2.list-primary.text-center.text-md-left
+							li
+								span.text-middle.icon.icon-sm.text-primary.mdi.mdi-clock.text-center(style="width: 30px;")
+								time.text-sbold.text-extra-small.text-middle(datetime='2016-01-01') 3 de fevereiro, 2017
+							//li(style='margin-left: 14px;')
+								span.text-middle.icon.icon-sm.text-turquoise.mdi.mdi-comment-multiple-outline.text-center  
+								a.text-middle(href='#comments')
+									span.inset-left-5.text-sbold.text-extra-small.text-silver-chalice 141
+							//li
+								span.text-middle.icon.icon-sm.text-turquoise.mdi.mdi-heart-outline.text-center
+								a.text-middle(href='#')
+									span.inset-left-5.text-sbold.text-extra-small.text-silver-chalice 542
+							//li
+								span.text-middle.icon.icon-sm.text-turquoise.mdi.mdi-share.text-right  
+								a.text-middle(href='#')
+									span.inset-left-5.text-sbold.text-extra-small.text-silver-chalice 42
+
+						.offset-top-25.offset-md-top-5
+							h1.text-spacing-inverse-50.text-capitalize.text-center.text-md-left Great Place to Work
+
+						.offset-top-20.offset-md-top-44
+							p.text-spacing-0 O trabalho do Great Place to Work® começou na década de 80, com Robert Levering, um jornalista que cobria assuntos ligados ao trabalho e especialmente a conflitos trabalhistas. Ele foi convidado para escrever um livro sobre as melhores empresas para trabalhar nos EUA. Sua resposta, à época, foi bem direta: “Não!”. Era impossível escrever este livro pois não existiria, segundo ele, nenhuma boa empresa para trabalhar, na perspectiva dos funcionários (e não dos donos ou executivos). Ele chegou inclusive a sugerir escrever um livro sobre as piores empresas para trabalhar, uma vez que ele tinha centenas de exemplos para apresentar. A editora chegou a considerar seriamente esta opção, mas acabou desistindo com receio de que o número de processos na justiça contra o livro seria muito grande.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 Após longas conversas, Robert acabou topando o projeto, mas fazendo à sua moda. Como jornalista, ele foi entrevistar milhares de funcionários, “in loco”, de forma totalmente confidencial, em centenas e centenas de empresas em todo o país. Ele encontrou, conforme esperado, pessoas que odiavam suas empresas e seus chefes, em organizações com péssimos ambientes de trabalho. Mas aí começaram as surpresas, contrariando todas as suas convicções anteriores. Encontrou também pessoas que adoravam aquilo que faziam, seus colegas, suas empresas! A descoberta deixou Robert tão impressionado que ele abandonou tudo que fazia e abriu um pequeno escritório (1 salinha) com sua esposa à época, a que deu o nome de Great Place to Work®. E assim continuou estudando e se aprofundando no tema.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 Sua primeira grande conclusão havia sido que sim, existem excelentes empresas para trabalhar. A segunda descoberta foi mais poderosa ainda: qualquer empresa, de qualquer tamanho, em qualquer lugar e em qualquer época, pode se tornar um excelente lugar para trabalhar.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 Escreveu um segundo livro, procurando entender por que as pessoas gostavam tanto de algumas empresas.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 Descobriu que de uma forma ou de outra as pessoas falavam coisas muito parecidas:
+
+						.offset-top-10(style='padding-left: 30px')
+							+list({
+								"type": "list-marker",
+								"style": "list-marked font-accent text-bold p text-left"
+							},[
+								{
+									"style": "text-primary", 
+									"text": "Gosto de trabalhar aqui porque tenho orgulho do que eu faço (e da minha empresa)"
+								}, {
+									"style": "text-primary", 
+									"text": "Gosto dos colegas com quem eu trabalho (há colaboração e espírito de equipe)"
+								}, {
+									"style": "text-primary", 
+									"text": "Confio nas pessoas para quem eu trabalho (posso confiar no meu chefe, ele me respeita e as decisões da empresa e do meu chefe são justas)"
+								}
+							])
+
+						.range.range-xs-center
+							.cell-sm-12
+								img.img-responsive.center-block(src="../images/photos/foto-gptw.jpg")
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 Em 1997 começamos a fazer as listas das Melhores Empresas para Trabalhar. A primeira lista lançada em todo o mundo foi aqui no Brasil (hoje na revista Época), em 1998 nos EUA (na Fortune) e atualmente em mais de 50 países.
+
+						.offset-top-15.offset-md-top-30
+							p.text-spacing-0 O principal objetivo das listas não é dar prêmios, mas sim divulgar os bons exemplos e estimular outras empresas a melhorar seu ambiente de trabalho. É uma forma de chamar a atenção da sociedade do quanto é importante um bom ambiente de trabalho.
+
+						.ofsset-top-15.offset-md-top-30.text-right
+							p.text-spacing-0 Fonte: 
+								a.text-turquoise.text-bold(target='_blank' href='www.gptw.com.br') GPTW.com.br
+													
+
+		// Conclusion
+		section.section-75.section-md-top-20.section-md-bottom-110
+			.shell
+				.range.range-xs-center.range-lg-right
+					.cell-xs-10.cell-sm-9.text-left
+
+						h3.font-accent.text-bold.text-uppercase.text-mine-shaft.text-spacing-25 A DAFEL na GPTW 
+
+						.offset-top-10.offset-md-top-25
+							p.text-spacing-0 Em meados de 2012 surgiu no coração do sócio Felipe, o desafio de inserir a Dafel no seleto grupo de melhores empresas para se trabalhar do cenário nacional, por dois anos realizamos a inscrição e participamos, chegamos perto , mas na terceira participação fomos coroados com uma posição no ranking e na nossa cidade sede apenas a Dafel e mais uma empresa conseguiram entrar no ranking.
+
+						.offset-top-10.offset-md-top-25
+							p Em Novembro de 2016 conseguimos! Nós comemoramos a primeira inserção da Dafel na lista das Melhores Empresas para Trabalhar no Brasil. Figuramos na posição 25 a nível nacional das empresas médias e pequenas do Varejo. Esse prêmio para nós é resultado de uma longa caminhada, lutando não só por um crescimento corporativo, mas também pelo crescimento daqueles que estão ao nosso lado no dia a dia. O Segredo do crescimento está nas pessoas, pois no momento que valorizamos cada um de nossa equipe, fortalecemos o time e assim os resultados chegam. Vivemos com seriedade desde 1990 e isso tem sido o nosso diferencial.
+
+						//.group.group-xs.btn-tags.offset-top-20.offset-md-top-30.clearfix
+							a.btn.btn-info.btn-icon.btn-icon-left(href="#")
+								span.icon.icon-xs.fa.fa-facebook
+								span.text-lowercase.text-regular.text-spacing-0.font-default facebook
+							a.btn.btn-curious-blue.btn-icon.btn-icon-left(href="#")
+								span.icon.icon-xs.fa.fa-twitter
+								span.text-lowercase.text-regular.text-spacing-0.font-default twitter
+							a.btn.btn-mandy.btn-icon.btn-icon-left(href="#")
+								span.icon.icon-xs.fa.fa-google-plus
+								span.text-lowercase.text-regular.text-spacing-0.font-default google +
+
+	// Page Footer
+	include ../sections/_footer-default

@@ -1,0 +1,57 @@
+extends ../_skeleton
+
+block title
+	title 404
+
+block page
+	//PageHeader
+	header.page-header.slider-menu-position
+		+rd-navbar-default({
+			"style":"",
+			"logo":cfg.brand.logo,
+			"logoFixed":cfg.brand.logoSmall,
+			"attr": {
+				"data-layout":"rd-navbar-fixed",
+				"data-sm-layout":"rd-navbar-fixed",
+				"data-md-layout":"rd-navbar-fullwidth",
+				"data-lg-layout":"rd-navbar-static"
+			}
+		})
+
+		+breadcrumb("404",{
+			0: {
+				"type":"link",
+				"title":cfg.nav.home.title,
+				"href":cfg.nav.home.href
+			},
+			1: {
+				"type":"link",
+				"title":"404",
+				"href":"404.html"
+			}
+		},"images/backgrounds/background-02-1920x900.jpg")
+
+	//PageContent
+	main.page-content.section-75.section-md-top-90.section-md-bottom-110
+
+	//404
+	section
+	.shell
+		div
+			h1 404
+		h5.text-spacing-75 Página não encontrada
+
+
+		.offset-top-25
+			p A página requisitada não foi encontrada. Isto pode ter sido causado por um erro de digitação ou a página pode ter sido removida.
+
+
+		.offset-top-30
+			a.btn.btn-primary(href="index.html" style="min-width:210px;") Voltar para a Home
+
+		.section-md-top-110
+			
+
+
+	//PageFooter
+	include ../sections/_footer-default
