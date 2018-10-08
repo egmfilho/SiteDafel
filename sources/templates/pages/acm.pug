@@ -1,0 +1,97 @@
+extends  ../_skeleton
+
+block title
+  title ACM
+
+block page
+  // Page Header
+  header.page-header.slider-menu-position
+    +rd-navbar-default({
+      "style": "",
+      "logo": cfg.brand.logo,
+      "logoFixed": cfg.brand.logoSmall,
+      "activeLink": 1,
+      "attr": {
+        "data-layout": "rd-navbar-fixed",
+        "data-sm-layout": "rd-navbar-fixed",
+        "data-md-layout": "rd-navbar-fullwidth",
+        "data-lg-layout": "rd-navbar-static"
+      }
+    })
+
+    +breadcrumb("Acm", {
+      0: {
+        "type": "Acm",
+        "title": cfg.nav.home.title,
+        "href": cfg.nav.home.href
+      },
+      1: {
+        "type": "link",
+        "title": "Acm",
+        "href": "acm.html"
+      }
+    }, "images/backgrounds/acm.jpg")
+
+  // Page Content
+  main.page-content
+
+    // Single Post
+    section.section-75.section-md-top-103.section-md-bottom-110
+      .shell.text-left
+        h1 Conhecendo mais sobre ACM
+        .range
+          .cell-md-8
+            img.img-responsive.center-block.box-shadow(src="images/acm.jpg" width="100%" height="200" alt="")
+          .cell-md-4
+            .comma.box-shadow
+              p Em geral, não existem restrições de uso, desde que seja elaborado um projeto adequado e que respeite as características do material
+              .by
+                i José Carlos Garcia Noronha
+
+          .cell-md-12.offset-top-20.offset-md-top-44.post-controls.list-inline.list-inline-2.list-primary.text-center.text-md-right
+            | Fonte: 
+            a(target="_blank" href="https://www.aecweb.com.br/cont/m/rev/paineis-de-acm-sao-usados-no-revestimento-de-fachadas-coberturas-e-marquises_12603_10_0")
+              | Redação AECweb / e-Construmarket
+          
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.text-spacing-0 Os painéis em ACM (alumínio composto, do inglês Aluminum Composite Material) podem ser usados no revestimento de fachadas, coberturas e marquises. “Em geral, não existem restrições de uso, desde que seja elaborado um projeto adequado e que respeite as características do material”, afirma José Carlos Garcia Noronha, integrante do comitê de Construção Civil da Associação Brasileira de Alumínio (ABAL). Uma das únicas situações em que não é possível empregar os painéis em ACM é como revestimento de piso, devido à abrasividade cotidiana.
+          
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.text-spacing-0 A solução é composta por duas chapas de alumínio com miolo de polietileno, sendo que a espessura de todo o conjunto varia, em geral, entre 3 e 4 mm. Dependendo da maneira como o produto será utilizado, é indicada uma medida ou outra. Para revestimento de fachada, a especificação mais adequada é o ACM com espessura de 4 mm e pintura tipo Kynar 500, sistema que garante uniformidade da cor e resistência a agentes externos. “Já para revestimentos internos, podem ser usadas as placas de 3 mm”, fala Noronha, lembrando que as peças mais facilmente encontradas no mercado são aquelas nos tamanhos: 1550 x 5000 mm, 1220 x 5000 mm e 1220 x 2440 mm.
+
+          .cell-md-8.offset-top-20.offset-md-top-44
+            p.font-accent.text-bold.text-uppercase.text-spacing-25.text-primary Vantagens
+            p.text-spacing-0 Entre as vantagens da solução, é possível destacar seu bom desempenho térmico e acústico, proporcionado pela camada de polietileno entre as chapas de alumínio. O material é, também, resistente à corrosão e está disponível em diferentes cores.
+
+          .cell-md-4.offset-top-20.offset-md-top-44
+            img.img-responsive.center-block.box-shadow(src="images/acm2.jpg" width="100%" height="120" alt="")
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.font-accent.text-bold.text-uppercase.text-spacing-25.text-primary Especificação
+            p.text-spacing-0 Um dos principais diferenciais dos painéis em ACM é a possibilidade de dobrá-los, o que os torna uma opção interessante para revestimento de fachadas com elementos curvos. Entretanto, as peças arrojadas necessitam ser encomendadas previamente com as empresas que executam o trabalho de beneficiamento.
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.text-spacing-0 Para evitar problemas, principalmente na fase de instalação, a escolha pelo material deve ser feita ainda na fase de concepção do projeto arquitetônico. “Também precisam estar bem claras e definidas as dimensões das placas, os acabamentos e os locais da fachada onde os painéis serão instalados”, ressalta o profissional.
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.text-spacing-0 O material é indicado tanto para obras novas, quanto em trabalhos de retrofit. Segundo Noronha, a alternativa é bastante especificada na renovação de pequenos e grandes prédios, fachadas de postos de gasolina, supermercados, escritórios, fechamento das laterais de caminhões baús, chapeamento de bancas de jornal e placas de comunicação visual. Optar pelos painéis em ACM para obras de retrofit, segundo o profissional, é garantia de longevidade, curvas, leveza e beleza, se comparado com outros revestimentos disponíveis no mercado.
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.text-spacing-0 No projeto, o arquiteto precisa indicar as folgas necessárias e o dimensionamento dos vãos onde o revestimento será instalado. Caso esses elementos não sejam previstos, podem acontecer problemas de acabamento entre o revestimento e a alvenaria, alinhamento e modulação inadequados, não acompanhando a movimentação ou integração com a fachada. O suporte de um profissional da área de projetos da empresa fabricante facilita a viabilização do projeto de arquitetura, criando, assim, melhor instalação e desempenho do produto.
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.font-accent.text-bold.text-uppercase.text-spacing-25.text-primary Instalação
+            p.text-spacing-0 Existem diferentes métodos para fixação, como os que usam suportes metálicos tipo ancoragem ou aqueles que realizam a colagem com fitas. Um dos principais problemas que pode ocorrer nessa etapa é a falta de alinhamento das peças, ou seja, as chapas chegam a determinado ponto e não encontram o suporte de fixação. Se o dimensionamento dos painéis foi realizado de forma adequada, a instalação será uniforme, caso contrário, apresentará variações, principalmente nas juntas de encontro.
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.text-spacing-0 O instalador deve ser bem preparado e ter pleno conhecimento do procedimento, sabendo que, por exemplo, não se pode apertar os parafusos excessivamente e de forma desigual. Isso fará com que algumas placas fiquem mais fundas e outras salientes. “A vedação entre as peças é realizada com uso de elastômero ou silicone”, fala Noronha, lembrando que é possível instalar o produto diretamente na alvenaria, sem estrutura, desde que a ancoragem seja alinhada e bem chumbada. Diferentemente do vidro, os painéis em ACM podem ser estocados em local úmido, e o ideal é que o material não acumule poeira para facilitar a limpeza que precede a vedação.
+
+          .cell-md-12.offset-top-20.offset-md-top-44
+            p.font-accent.text-bold.text-uppercase.text-spacing-25.text-primary Manutenção
+            p.text-spacing-0 Os painéis em ACM exigem pouca manutenção, sendo que a principal atenção deve ser com a limpeza. “O ideal é que ela seja realizada com água e sabão neutro, no mínimo, quatro vezes por ano”, recomenda o profissional.
+
+  // Page Footer
+  include ../sections/_footer-default
+
+
+
